@@ -1,5 +1,4 @@
 import React, { Suspense, useState } from 'react';
-import LawyerCard from '../coMponents/LawyerCard.jsx';
 import IADvocate from '../coMponents/IADvocate.jsx';
 // import lawyers from  'LawyersData.json'; // Assuming your JSON is saved here
 // console.log(lawyers);
@@ -49,7 +48,7 @@ let [allAdvocates, setAllAdvocate] = useState([])
           </button>
         </div>
   )}    
-      
+
     </div>
   );
 };
