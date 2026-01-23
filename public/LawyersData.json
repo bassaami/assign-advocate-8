@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "name": "Sarah J. Mitchell",
+    "specialty": "Family Law",
+    "experience": 12,
+    "licenseNumber": "FL-992834",
+    "consultFee": 250,
+    "availableDays": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "name": "Robert Chen",
+    "specialty": "Intellectual Property",
+    "experience": 8,
+    "licenseNumber": "IP-112045",
+    "consultFee": 300,
+    "availableDays": [
+      "Monday",
+      "Tuesday",
+      "Thursday"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+    "name": "Elena Rodriguez",
+    "specialty": "Criminal Defense",
+    "experience": 15,
+    "licenseNumber": "CD-883721",
+    "consultFee": 275,
+    "availableDays": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296",
+    "name": "Marcus Thorne",
+    "specialty": "Corporate Law",
+    "experience": 20,
+    "licenseNumber": "CORP-00492",
+    "consultFee": 450,
+    "availableDays": [
+      "Monday",
+      "Wednesday"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c",
+    "name": "Aisha Khan",
+    "specialty": "Immigration Law",
+    "experience": 6,
+    "licenseNumber": "IMM-772310",
+    "consultFee": 180,
+    "availableDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+    "name": "David Sterling",
+    "specialty": "Real Estate",
+    "experience": 10,
+    "licenseNumber": "RE-334912",
+    "consultFee": 220,
+    "availableDays": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+    "name": "Linda Wu",
+    "specialty": "Employment Law",
+    "experience": 9,
+    "licenseNumber": "EMP-445019",
+    "consultFee": 200,
+    "availableDays": [
+      "Monday",
+      "Thursday"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "name": "James O'Connor",
+    "specialty": "Personal Injury",
+    "experience": 14,
+    "licenseNumber": "PI-559283",
+    "consultFee": 0,
+    "availableDays": [
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://images.unsplash.com/photo-1598550874175-4d0fe4a2c90b",
+    "name": "Sophia Moretti",
+    "specialty": "Tax Law",
+    "experience": 11,
+    "licenseNumber": "TX-100293",
+    "consultFee": 350,
+    "availableDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "name": "Gregory Vance",
+    "specialty": "Environmental Law",
+    "experience": 7,
+    "licenseNumber": "ENV-991023",
+    "consultFee": 240,
+    "availableDays": [
+      "Wednesday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c",
+    "name": "Maya Patel",
+    "specialty": "Civil Rights",
+    "experience": 13,
+    "licenseNumber": "CR-443210",
+    "consultFee": 210,
+    "availableDays": [
+      "Monday",
+      "Tuesday",
+      "Friday"
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+    "name": "Samuel Beck",
+    "specialty": "Estate Planning",
+    "experience": 18,
+    "licenseNumber": "EST-882734",
+    "consultFee": 325,
+    "availableDays": [
+      "Tuesday",
+      "Thursday"
+    ]
+  }
+]
