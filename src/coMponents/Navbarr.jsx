@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../C002-assets/logo.png';
+import { Link } from 'react-router';
 
 const Navbarr = () => {
     // Adding state to handle the mobile menu toggle
@@ -41,13 +42,13 @@ const Navbarr = () => {
                 <div className={`items-center justify-between ${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white w-full md:w-auto">
                         
-    <a href="#" className="block py-2 px-3 text-blue-700 md:p-0 hover:text-blue-900">Home</a>
+    <Link to='/'><a className="block py-2 px-3 text-blue-700 md:p-0 hover:text-blue-900">Home</a></Link>
                        
-    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Booking</a>
+    <Link to='/appoint' ><a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Booking</a></Link>
                        
-    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Blogs</a>
-                        
-    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
+    <Link to='/blogs'> <a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Blogs</a> </Link>
+                         
+    <a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
                         
                     </ul>
                 </div>

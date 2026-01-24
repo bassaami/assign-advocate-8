@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const IADvocate = ({iLawyer}) => {
 
     // let data = use(advocatePromise)
-let { name, image, specialty, experience , licenseNumber} = iLawyer
+let { name, image, specialty, experience , licenseNumber, id} = iLawyer
     console.log(iLawyer);
+
+
     return (
     <div className="flex bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden max-w-lg mb-6 hover:shadow-lg transition-shadow">
       {/* Left: Image Section */}
@@ -40,10 +43,12 @@ let { name, image, specialty, experience , licenseNumber} = iLawyer
         </div>
 
         {/* View Details Button */}
-        <button className="w-full bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
+        <Link to={`/lawyer/${id}`}><button className="w-full bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
           View Details
-        </button>
+        </button></Link>
       </div>
+
+
     </div>
     );
 };

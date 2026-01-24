@@ -40,7 +40,7 @@ const Footer = () => {
 
         {/* Copyright (Optional) */}
         <p className="mt-6 text-xs text-gray-600">
-          © { new Date().getFullYear()} Law.BD. All rights reserved.
+          © {new Date().getFullYear()} Law.BD. All rights reserved.
         </p>
         <img src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c" alt="" />
       </div>
