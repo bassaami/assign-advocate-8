@@ -34,6 +34,8 @@ const addToDBase = (id) => {
 
     if (exists) {
         console.log(`Duplicate: ID ${id} is already in storage.`);
+        // Visual confirmation since DevTools is failing you
+        console.info("%c VERIFIED: Data exists on disk, even if Application tab is buggy.", "color: yellow; font-weight: bold;");
         alert("This item already exists in your bookings.");
     } else {
         storeBookDATA.push(String(id));
@@ -48,6 +50,9 @@ const addToDBase = (id) => {
 
         console.log("%c SAVE SUCCESSFUL ", "background: #222; color: #bada55; font-size: 14px");
         console.log("New List saved to Disk:", localStorage.getItem("readList"));
+        
+        // Final proof: If this alert shows the ID, the data is 100% saved.
+        alert("Saved Successfully! Data on disk: " + localStorage.getItem("readList"));
     }
 }
 
@@ -55,4 +60,4 @@ const addToDBase = (id) => {
 console.log("--- SYSTEM BOOT ---");
 console.log("Storage on Disk at startup:", localStorage.getItem("readList") || "EMPTY");
 
-export { addToDBase }
+export { addToDBase , getBookAppoint}

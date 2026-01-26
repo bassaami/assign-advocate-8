@@ -4,6 +4,7 @@ import Root from '../paGes/Root';
 import ErrPage from '../paGes/ErrPage'
 import Homee from '../paGes/Homee';
 import BookAppoint from '../paGes/BookAppoint';
+import AppoIntLisp from '../paGes/AppoIntLisp';
 
 export const router = createBrowserRouter([
   {
@@ -27,8 +28,9 @@ children: [
         Component: BookAppoint
     },
     {
-        path: '/appoint',
-        Component: BookAppoint
+        path: '/appoints',
+        loader: () => fetch('LawyersData.json'),
+        Component: AppoIntLisp
 
     }
 

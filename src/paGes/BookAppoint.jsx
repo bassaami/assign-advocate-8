@@ -76,10 +76,11 @@ addToDBase(id)
           </p>
         </div>
 
-        {/* View Details Button */} {/* <Link to={`/lawyer/${id}`}></Link> */}
+        {/* View Details Button */} {/* <Link to='/appoints'></Link> */}
+        <Link to='/appoints'>
         <button onClick={() => handleAppoint(id)} className="w-full bg-slate-800 hover:bg-slate-900 text-white text-xl font-medium py-2 px-4 rounded transition-colors">
           Book Appoint
-        </button> 
+        </button> </Link>
       </div>
 
       
