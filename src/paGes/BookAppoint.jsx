@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
+import { addToDBase } from '../Utilityyy/addToDB';
 
 const BookAppoint = () => {
 
@@ -16,6 +17,23 @@ console.log(singleLawyer);
 let {availableDays,  name, image, specialty, experience , licenseNumber} = singleLawyer
 //     console.log(iLawyer);
 
+const handleAppoint = id => {
+// store with id
+// where to store
+// array or collection
+// if book already exist then push in the array
+addToDBase(id)
+
+}
+
+
+
+
+
+
+
+
+
     return (
 <div className="flex gap-6 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden max-w-[70%] mb-9 mt-30 mx-auto hover:shadow-lg transition-shadow">
     
@@ -29,7 +47,7 @@ let {availableDays,  name, image, specialty, experience , licenseNumber} = singl
       <div className="w-2/3 p-4 flex flex-col justify-between">
         <div>
           {/* Experience on Top */}
-          <span className="text-1xl font-semibold text-blue-600 uppercase tracking-wide">
+          <span className="text-xl font-semibold text-blue-600 uppercase tracking-wide">
             { experience} years Experience
           </span>
 
@@ -43,10 +61,10 @@ let {availableDays,  name, image, specialty, experience , licenseNumber} = singl
            Specialty = { specialty}
           </p>
 
-<div className="flex text-xl gap-3">
-    Available Days = 
+<div className="flex text-xl  gap-2">
+    Available Days: 
     {
-        availableDays.map(days => <button className='btn-xs'>{days} </button>)
+        availableDays.map(days => <button className=' p-1 bg-lime-200 text-base border'>{days} </button>)
     }
 </div>
           {/* Dotted Border */}
@@ -58,10 +76,10 @@ let {availableDays,  name, image, specialty, experience , licenseNumber} = singl
           </p>
         </div>
 
-        {/* View Details Button */}
-        <Link to={`/lawyer/${id}`}><button className="w-full bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
+        {/* View Details Button */} {/* <Link to={`/lawyer/${id}`}></Link> */}
+        <button onClick={() => handleAppoint(id)} className="w-full bg-slate-800 hover:bg-slate-900 text-white text-xl font-medium py-2 px-4 rounded transition-colors">
           Book Appoint
-        </button></Link>
+        </button> 
       </div>
 
       
