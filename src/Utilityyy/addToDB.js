@@ -1,15 +1,20 @@
 // Private helper function to get data
 const getBookAppoint = () => {
     const BookedSTR = localStorage.getItem("readList")
-    console.log("Current localStorage string:", BookedSTR);
+    
+    // Log exactly what is currently on the physical disk
+    console.log("DISK CHECK - Current readList:", BookedSTR);
 
     if (BookedSTR) {
         try {
             const storeBookDATA = JSON.parse(BookedSTR)
-            // Filter out any existing nulls/undefined from previous errors
-            return Array.isArray(storeBookDATA) ? storeBookDATA.filter(item => item !== null && item !== undefined) : [];
+            if (Array.isArray(storeBookDATA)) {
+                // Filter out nulls/undefined to keep the list clean
+                return storeBookDATA.filter(item => item !== null && item !== undefined);
+            }
+            return [];
         } catch (e) {
-            console.error("Failed to parse localStorage data", e);
+            console.error("Critical: JSON Parse Error. Resetting list.", e);
             return [];
         }
     }
@@ -17,32 +22,37 @@ const getBookAppoint = () => {
 }
 
 const addToDBase = (id) => {
-    // Safety check: Don't add if id is missing
     if (id === undefined || id === null) {
-        console.error("Error: Cannot add undefined or null ID to storage.");
+        console.error("Action Blocked: Cannot save a null/undefined ID.");
         return;
     }
 
-    console.log("Attempting to add ID:", id);
-
     const storeBookDATA = getBookAppoint()
 
-    // Ensure we are comparing the same types (e.g., both strings)
+    // check if it exists (converting both to string to be safe)
     const exists = storeBookDATA.find(item => String(item) === String(id));
 
     if (exists) {
-        console.log("No item ADDED: already exists in list");
-        alert("This item already exists")
+        console.log(`Duplicate: ID ${id} is already in storage.`);
+        alert("This item already exists in your bookings.");
     } else {
-        console.log("New item found! Adding to list...");
-        storeBookDATA.push(id)
+        storeBookDATA.push(String(id));
         
-        const data = JSON.stringify(storeBookDATA)
-        localStorage.setItem("readList", data)
+        const data = JSON.stringify(storeBookDATA);
         
-        // Debug: Verify it was saved
-        console.log("Saved to localStorage:", localStorage.getItem("readList"));
+        // PHYSICAL SAVE
+        localStorage.setItem("readList", data);
+        
+        // This 'storage' event sometimes forces the DevTools to refresh the table
+        window.dispatchEvent(new Event('storage'));
+
+        console.log("%c SAVE SUCCESSFUL ", "background: #222; color: #bada55; font-size: 14px");
+        console.log("New List saved to Disk:", localStorage.getItem("readList"));
     }
 }
+
+// Global check on load
+console.log("--- SYSTEM BOOT ---");
+console.log("Storage on Disk at startup:", localStorage.getItem("readList") || "EMPTY");
 
 export { addToDBase }
