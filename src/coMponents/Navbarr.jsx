@@ -42,11 +42,11 @@ const Navbarr = () => {
     <Link to='/'>
     <a className="block py-2 px-3 text-blue-700 md:p-0 hover:text-blue-900">Home</a></Link>
                        
-    <Link to='/appoints' ><a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Booking</a></Link>
+    <Link to='/appoints'><a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Booking</a></Link>
                        
-    <Link to='/blogs'> <a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Blogs</a> </Link>
+    <Link to='/blogs'><a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Blogs</a> </Link>
                          
-    <a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
+    <Link to='/contact'> <a  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></Link>
                         
                     </ul>
                 </div>

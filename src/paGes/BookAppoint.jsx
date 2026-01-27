@@ -14,7 +14,7 @@ const singleLawyer = data.find(advoc => advoc.id === sid)
 console.log(singleLawyer);
 
 
-let {availableDays,  name, image, specialty, experience , licenseNumber} = singleLawyer
+let {availableDays, consultFee, name, image, specialty, experience, licenseNumber} = singleLawyer
 //     console.log(iLawyer);
 
 const handleAppoint = id => {
@@ -47,7 +47,7 @@ addToDBase(id)
           </span>
 
           {/* Name below Experience */}
-          <h2 className="text-4xl font-bold text-gray-900 my-15">
+          <h2 className="text-4xl font-bold text-gray-900 my-12">
             { name}
           </h2>
 
@@ -62,6 +62,7 @@ addToDBase(id)
         availableDays.map(days => <button className=' p-1 bg-lime-200 text-base border'>{days} </button>)
     }
 </div>
+<div className='text-base my-6 p-1 bg-pink-200 text-pink-900'> Consult Fee: ${consultFee} </div>
           {/* Dotted Border */}
           <div className="border-t border-dotted border-gray-400 my-5"></div>
 
