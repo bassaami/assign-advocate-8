@@ -15,13 +15,10 @@ const Navbarr = () => {
                     <span className="text-2xl font-bold text-black">Law.BD</span>
                 </a>
 
-                <div className="flex md:order-2 space-x-3 md:space-x-0">
-                    <button 
-                        type="button" 
-                        className="text-white bg-lime-800 hover:bg-lime-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-all"
-                    >
+        <div className="flex md:order-2 space-x-3 md:space-x-0">
+            <button     type="button"     className="text-white bg-green-800 hover:bg-lime-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-all" >
                         Contact Now
-                    </button>
+            </button>
                     
                     {/* Mobile Menu Button */}
                     <button 

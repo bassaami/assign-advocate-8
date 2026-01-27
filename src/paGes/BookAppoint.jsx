@@ -29,11 +29,6 @@ addToDBase(id)
 
 
 
-
-
-
-
-
     return (
 <div className="flex gap-6 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden max-w-[70%] mb-9 mt-30 mx-auto hover:shadow-lg transition-shadow">
     

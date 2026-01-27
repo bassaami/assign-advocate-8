@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const IADvocate = ({iLawyer}) => {
 
     // let data = use(advocatePromise)
-let { name, image, specialty, experience , licenseNumber, id} = iLawyer
+let { name, image, specialty, experience , licenseNumber, id} = iLawyer || {}
     console.log(iLawyer);
 
 
