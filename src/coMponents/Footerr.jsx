@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <nav className="flex space-x-6 mb-8 text-gray-400 text-sm md:text-base">
           <a href="/" className="hover:text-white transition-colors">Home</a>
-          <a href="/bookings" className="hover:text-white transition-colors">Bookings</a>
+          <a href="/appoints" className="hover:text-white transition-colors">Bookings</a>
           <a href="/blogs" className="hover:text-white transition-colors">Blogs</a>
           <a href="/contact" className="hover:text-white transition-colors">Contact</a>
         </nav>

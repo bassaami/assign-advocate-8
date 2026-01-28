@@ -5,6 +5,7 @@ import ErrPage from '../paGes/ErrPage'
 import Homee from '../paGes/Homee';
 import BookAppoint from '../paGes/BookAppoint';
 import AppoIntLisp from '../paGes/AppoIntLisp';
+import BlogQues from '../paGes/BlogQues';
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,8 @@ children: [
     },
     {
         path: '/blogs',
-        Component: BookAppoint
+        loader: () => fetch('Queryblog.json'),
+        Component: BlogQues
     },
     {
         path: '/appoints',

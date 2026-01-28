@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+// import { removeFromDB } from '../Utilityyy/addToDB';
 
-const BokedLawyer = ({apbk}) => {
+const BokedLawyer = ({onRemove, apbk}) => {
 
 let { name, image, specialty, experience , licenseNumber, id} = apbk || {}
+
+// const handleRemoveInstant = id => {  removeFromDB(id)  }
+
 
     return (
 <div className="flex bg-gray-300 w-full mx-auto  rounded-lg shadow-md border border-gray-200 overflow-hidden max-w-lg mb-6 hover:shadow-lg transition-shadow">
@@ -40,7 +44,7 @@ let { name, image, specialty, experience , licenseNumber, id} = apbk || {}
         </div>
 
         {/* View Details Button */}
-        <button className="w-full bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
+        <button onClick={() => onRemove(id)} className="w-full bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium py-2 px-4 rounded transition-colors">
           Cancel Appoint
         </button>
       </div>

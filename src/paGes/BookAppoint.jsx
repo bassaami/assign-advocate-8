@@ -59,7 +59,7 @@ addToDBase(id)
 <div className="flex text-xl  gap-2">
     Available Days: 
     {
-        availableDays.map(days => <button className=' p-1 bg-lime-200 text-base border'>{days} </button>)
+        availableDays.map(days => <button key={days} className=' p-1 bg-lime-200 text-base border'>{days} </button>)
     }
 </div>
 <div className='text-base my-6 p-1 bg-pink-200 text-pink-900'> Consult Fee: ${consultFee} </div>

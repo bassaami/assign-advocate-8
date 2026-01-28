@@ -1,6 +1,7 @@
 // Private helper function to get data
 const getBookAppoint = () => {
     const BookedSTR = localStorage.getItem("readList")
+    // let jufnvKK = localStorage.removeItem("readList")
     
     // Log exactly what is currently on the physical disk
     console.log("DISK CHECK - Current readList:", BookedSTR);
@@ -35,8 +36,8 @@ const addToDBase = (id) => {
     if (exists) {
         console.log(`Duplicate: ID ${id} is already in storage.`);
         // Visual confirmation since DevTools is failing you
-        console.info("%c VERIFIED: Data exists on disk, even if Application tab is buggy.", "color: yellow; font-weight: bold;");
-        alert("This item already exists in your bookings.");
+        console.info( "%c VERIFIED: Data exists on disk, even if Application tab is buggy.", "color: yellow; font-weight: bold;");
+        alert("This Appoint exists in your bookings.");
     } else {
         storeBookDATA.push(String(id));
         
@@ -60,4 +61,20 @@ const addToDBase = (id) => {
 console.log("--- SYSTEM BOOT ---");
 console.log("Storage on Disk at startup:", localStorage.getItem("readList") || "EMPTY");
 
-export { addToDBase , getBookAppoint}
+/**
+ * New function to remove an item from the Database
+ */
+const removeFromDB = (id) => {
+    const storedData = getBookAppoint();
+    // Filter out the ID to be removed
+    const remainingData = storedData.filter(item => String(item) !== String(id));
+    
+    // Save the updated list back to localStorage
+    localStorage.setItem("readList", JSON.stringify(remainingData));
+    
+    // Trigger storage event for cross-tab sync if necessary
+    window.dispatchEvent(new Event('storage'));
+}
+
+export { addToDBase, getBookAppoint, removeFromDB }
+

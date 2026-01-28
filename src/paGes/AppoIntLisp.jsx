@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useLoaderData } from 'react-router';
-import { getBookAppoint } from '../Utilityyy/addToDB';
-import IADvocate from '../coMponents/IADvocate';
+import { getBookAppoint, removeFromDB } from '../Utilityyy/addToDB';
+// import IADvocate from '../coMponents/IADvocate';
 import BokedLawyer from './BokedLawyer';
 // import BookAppoint from './BookAppoint';
 
@@ -23,12 +23,25 @@ useEffect(() => {
     setAppointt(myAppoint)
 },[])
 
+  // NEW: The handler to update UI instantly
+  const handleRemoveInstant = (id) => {
+    // 1. Remove from database/localStorage
+    removeFromDB(id);
+    
+    // 2. Update the local UI state instantly by filtering out the deleted item
+    const remaining = usrAppointT.filter(lawyer => lawyer.id !== id);
+    setAppointt(remaining);
+  };
+
     return (
-        <div className='my-20 mx-auto'>
+        <div className='mt-20 mx-auto'>
             <h1 className='text-5xl text-center'> Your Appoints: {usrAppointT.length} </h1>
-<div className="grid grid-cols-1 gap-4 m-10">
+<div className="grid grid-cols-1 gap-4 m-5">
     {
-        usrAppointT.map(apbk => <BokedLawyer apbk={apbk} key={apbk.id}  />  )
+        usrAppointT.map(apbk => <BokedLawyer
+            onRemove={handleRemoveInstant} // Passing the function here
+            apbk={apbk} key={apbk.id} 
+             />  )
     }
 </div>
         </div>
