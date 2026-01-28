@@ -59,6 +59,7 @@ useEffect(() => {
     return (
         <div className='mt-20 mx-auto'>
             <h1 className='text-5xl text-center'> Your Appoints: {usrAppointT.length} </h1>
+{usrAppointT.length === 0 && <h1 className='text-2xl my-30 text-center'>SORRY, YOU HAVE NO APPOINT</h1>}
 
 {/* --- CHART SECTION --- */}
       {usrAppointT.length > 0 && (
