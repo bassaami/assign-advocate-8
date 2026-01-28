@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const BokedLawyer = ({onRemove, apbk}) => {
 
-let { name, image, specialty, experience , licenseNumber, id} = apbk || {}
+let {consultFee, name, image, specialty, experience, licenseNumber, id} = apbk || {}
 
 // const handleRemoveInstant = id => {  removeFromDB(id)  }
 
@@ -32,6 +32,9 @@ let { name, image, specialty, experience , licenseNumber, id} = apbk || {}
           {/* Specialty below Name */}
           <p className="text-sm text-gray-800 mb-3">
             { specialty}
+          </p>
+          <p className="text-sm text-gray-800 mb-3">
+            Fee: { consultFee}
           </p>
 
           {/* Dotted Border */}
