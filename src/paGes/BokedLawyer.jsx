@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 // import { removeFromDB } from '../Utilityyy/addToDB';
+// import toast from 'react-hot-toast'; // 1. Import toast
 
 const BokedLawyer = ({onRemove, apbk}) => {
 

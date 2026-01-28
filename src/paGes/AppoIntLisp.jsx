@@ -5,6 +5,7 @@ import { getBookAppoint, removeFromDB } from '../Utilityyy/addToDB';
 // import IADvocate from '../coMponents/IADvocate';
 import BokedLawyer from './BokedLawyer';
 // import BookAppoint from './BookAppoint';
+import toast from 'react-hot-toast'; // 1. Import toas
 
 const AppoIntLisp = () => {
 
@@ -31,6 +32,24 @@ useEffect(() => {
     // 2. Update the local UI state instantly by filtering out the deleted item
     const remaining = usrAppointT.filter(lawyer => lawyer.id !== id);
     setAppointt(remaining);
+
+//TOASTER
+    toast.error('This Appointment is Canceled', {
+        duration: 4000,
+    // Add custom styling here
+    style: {
+      border: '1px solid #713200',
+      padding: '16px',
+      color: '#FFFFFF',          // White text
+      backgroundColor: '#E11D48', // Bright Red (Tailwind rose-600)
+      fontWeight: 'bold',        // Bold text
+    },
+    iconTheme: {
+      primary: '#FFFFFF',        // White icon
+      secondary: '#E11D48',      // Red background for the icon circle
+    },
+        
+    });
   };
 
     return (
